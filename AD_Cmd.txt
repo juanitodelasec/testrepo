@@ -1,0 +1,6 @@
+Get-ADUser MATRICULE -Properties *
+net user /dom MATRICULE
+
+
+([ADSISEARCHER]"samaccountname=$($env:USERNAME)").Findone().Properties.memberof
+avec un | Select-String XXX pour le filtre
